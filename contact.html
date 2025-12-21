@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact Us | W3 App Developers - Erode & Perundurai</title>
+  <meta name="description"
+        content="Contact W3 App Developers IT Services (Erode), TrainingTrains Internship Center (Perundurai). Phone: 9698548633, 9025010144. Get directions via Google Maps." />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Contact-specific styles */
+    .contact-locations { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-bottom: 48px; }
+    .location-card { background: white; border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm); }
+    .location-card h3 { color: var(--color-primary); margin-top: 0; }
+    .location-address { font-size: 0.95rem; line-height: 1.6; margin: 12px 0; }
+    .location-phones { margin: 16px 0; }
+    .location-phones a { display: inline-block; margin-right: 12px; margin-bottom: 8px; font-weight: 600; }
+    .map-container { height: 240px; border-radius: var(--radius-md); overflow: hidden; margin-top: 16px; box-shadow: var(--shadow-sm); }
+    .contact-main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    @media (max-width: 768px) { .contact-main-grid { grid-template-columns: 1fr; gap: 32px; } }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="w3Tech Logo.jpg" alt="W3 App Developers Logo" class="brand-logo" />
+        <span class="brand-text">W3 App Developers</span>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="ai-ad-maker.html" class="nav-link">AI Ad</a></li>
+          <li><a href="internship.html" class="nav-link">Internship</a></li>
+          <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+          <li><a href="alumni.html" class="nav-link">Alumni</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Contact Us</h1>
+          <p class="hero-subtitle">
+            Reach out for IT services, internship enquiries, training programs or domain/hosting support at our Erode & Perundurai locations.
+          </p>
+          <div class="hero-ctas">
+            <a href="tel:+919698548633" class="btn btn-primary">Call Now: 96985 48633</a>
+            <a href="https://wa.me/919698548633" class="btn btn-outline btn-whatsapp" target="_blank">
+              WhatsApp Chat
+            </a>
+            <a href="#contact-form" class="btn btn-secondary">Send Message</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <h3>Two Locations in Erode District</h3>
+            <p>IT Services & Consultancy (N.G. Palayam) + TrainingTrains Internship Center (Perundurai)</p>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value">96985 48633</span>
+              <span class="stat-label">Primary Contact</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">90250 10144</span>
+              <span class="stat-label">Alternate Contact</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">24/7</span>
+              <span class="stat-label">WhatsApp Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFICE LOCATIONS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Office Locations</h2>
+          <p>Visit our IT services office or TrainingTrains internship center. Both locations are easily accessible from Erode city.</p>
+        </div>
+
+        <div class="contact-locations">
+          <!-- BRANCH 1: IT Services -->
+          <div class="location-card">
+            <h3>🏢 IT Services & Consultancy</h3>
+            <div class="location-address">
+              332 Mullamparappu,<br>
+              N.G. Palayam Post,<br>
+              Erode, Tamil Nadu 638115
+            </div>
+            <div class="location-phones">
+              <a href="tel:+919698548633" class="btn btn-primary btn-sm">Call: 96985 48633</a>
+              <a href="tel:+919025010144" class="btn btn-secondary btn-sm">Call: 90250 10144</a>
+            </div>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.057!2d77.666!3d11.333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDIwJzAyLjIiTiA3N8KwMzknNTguNSJF!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
+              class="map-container" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <p style="margin-top:12px; font-size:0.9rem;">
+              <a href="https://maps.app.goo.gl/1HEqmSsf3mdXzR7g6" target="_blank">Get Directions →</a>
+            </p>
+          </div>
+
+          <!-- BRANCH 2: Training Center -->
+          <div class="location-card">
+            <h3>🎓 TrainingTrains Internship Center</h3>
+            <div class="location-address">
+              28/8, Sarayakkaran Thottam,<br>
+              Kalliyam Pudur Road,<br>
+              Perundurai, Erode - 638052
+            </div>
+            <div class="location-phones">
+              <a href="tel:+919698548633" class="btn btn-primary btn-sm">Call: 96985 48633</a>
+              <a href="tel:+919025010144" class="btn btn-secondary btn-sm">Call: 90250 10144</a>
+            </div>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.057!2d77.666!3d11.333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDIwJzAyLjIiTiA3N8KwMzknNTguNSJF!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
+              class="map-container" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <p style="margin-top:12px; font-size:0.9rem;">
+              <a href="https://maps.app.goo.gl/ySPknsJuWkXw58s78" target="_blank">Get Directions →</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTACT FORM -->
+    <section class="section section-alt" id="contact-form">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+          <p>Send us a message for IT services, internship applications, project quotes or general enquiries.</p>
+        </div>
+
+        <div class="contact-main-grid">
+          <!-- CONTACT INFO SUMMARY -->
+          <div class="location-card" style="height: fit-content;">
+            <h3>📞 Quick Contacts</h3>
+            <div class="location-phones" style="margin-top: 16px;">
+              <a href="tel:+919698548633" style="font-size: 1.3rem; padding: 12px 20px; margin-bottom: 12px; display: block;">
+                📱 +91 96985 48633
+              </a>
+              <a href="tel:+919025010144" style="font-size: 1.3rem; padding: 12px 20px; margin-bottom: 12px; display: block;">
+                📱 +91 90250 10144
+              </a>
+            </div>
+            
+            <h3 style="margin-top: 24px;">💬 WhatsApp</h3>
+            <p style="font-size: 0.95rem;">
+              Click to chat instantly for:<br>
+              • IT Services & Quotes<br>
+              • Internship Applications<br>
+              • Training Enquiries<br>
+              • Domain/Hosting Support
+            </p>
+            <a href="https://wa.me/919698548633" class="btn btn-outline btn-whatsapp" target="_blank" style="margin-top: 12px;">
+              Start WhatsApp Chat
+            </a>
+
+            <h3 style="margin-top: 24px;">📍 Working Hours</h3>
+            <p style="font-size: 0.9rem; color: var(--color-muted);">
+              Mon - Sat: 9:00 AM - 7:00 PM<br>
+              Sunday: 10:00 AM - 4:00 PM
+            </p>
+          </div>
+
+          <!-- CONTACT FORM -->
+          <div>
+            <form id="mainContactForm" class="form">
+              <div class="form-row">
+                <label for="cname">Full Name*</label>
+                <input type="text" id="cname" name="name" required />
+              </div>
+              <div class="form-row">
+                <label for="cemail">Email*</label>
+                <input type="email" id="cemail" name="email" required />
+              </div>
+              <div class="form-row">
+                <label for="cphone">Phone / WhatsApp*</label>
+                <input type="tel" id="cphone" name="phone" required />
+              </div>
+              <div class="form-row">
+                <label for="csubject">Subject*</label>
+                <select id="csubject" name="subject" required>
+                  <option value="">Select Subject</option>
+                  <option value="service">💻 IT Service Enquiry</option>
+                  <option value="website">🌐 Website Development</option>
+                  <option value="app">📱 Android App Development</option>
+                  <option value="software">⚙️ Custom Software</option>
+                  <option value="ai">🤖 AI/ML Solutions</option>
+                  <option value="training">🎓 Internship / Training</option>
+                  <option value="hosting">☁️ Domain / Hosting</option>
+                  <option value="marketing">📈 Digital Marketing</option>
+                  <option value="other">❓ General Enquiry</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="cmessage">Message*</label>
+                <textarea id="cmessage" name="message" rows="5" placeholder="Tell us about your requirements, project timeline, budget or questions..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <p class="form-status" id="contactStatus"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BUTTONS ROW -->
+    <section class="section section-accent">
+      <div class="container">
+        <div class="internship-inner">
+          <div class="internship-content">
+            <h2>Need Help Right Now?</h2>
+            <p>Our team responds to all enquiries within 2 hours during working days.</p>
+          </div>
+          <div class="internship-actions">
+            <a href="tel:+919698548633" class="btn btn-primary">Call Now</a>
+            <a href="https://wa.me/919698548633" class="btn btn-outline btn-whatsapp" target="_blank">
+              WhatsApp Chat
+            </a>
+            <a href="https://calendly.com/your-link/schedule-meeting" class="btn btn-secondary" target="_blank">
+              Schedule Meeting
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logo/w3Tech Logo.jpg" alt="W3 App Developers" class="footer-logo" />
+        <p>Complete IT solutions, internship training and hosting services across Tamil Nadu.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="internship.html">Internship</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Services</h3>
+        <ul>
+          <li>Website & App Development</li>
+          <li>Custom Software</li>
+          <li>AI / ML / Data Science</li>
+          <li>Digital Marketing & SEO</li>
+          <li>Cloud & Hosting</li>
+          <li>Internship & Training</li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>📍 Locations</h3>
+        <p>
+          <strong>IT Services:</strong><br>
+          332 Mullamparappu, N.G. Palayam<br>
+          Erode - 638115
+        </p>
+        <p>
+          <strong>Training Center:</strong><br>
+          28/8 Sarayakkaran Thottam<br>
+          Perundurai, Erode - 638052
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="year"></span> W3 App Developers | TrainingTrains | Domainhostly. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Contact form handler
+    handleFormSubmit("mainContactForm", "contactStatus", "contactSubmissions");
+  </script>
+  <!-- Floating WhatsApp button -->
+<div class="wa-floating">
+  <a href="https://wa.me/919698548633" target="_blank" class="wa-pill">
+    WhatsApp us
+  </a>
+  <a href="https://wa.me/919698548633" target="_blank" class="wa-icon">
+    <!-- use any WA svg/png here if you like -->
+    <span>🟢</span>
+  </a>
+</div>
+
+</body>
+</html>

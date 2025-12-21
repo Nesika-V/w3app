@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projects & Portfolio | W3 App Developers</title>
+  <meta name="description"
+        content="View our portfolio of web development, mobile apps, custom software, AI/ML projects and internship student works completed for clients across Tamil Nadu." />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Portfolio-specific styles */
+    .portfolio-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; justify-content: center; }
+    .filter-btn { padding: 8px 16px; border: 1px solid #ddd; background: white; border-radius: 999px; cursor: pointer; transition: all 0.2s; }
+    .filter-btn.active, .filter-btn:hover { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 24px; }
+    .portfolio-item { position: relative; overflow: hidden; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); transition: all 0.3s; }
+    .portfolio-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .portfolio-img { height: 220px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; }
+    .portfolio-overlay { position: absolute; inset: 0; background: rgba(255,107,53,0.9); color: white; padding: 20px; opacity: 0; transition: opacity 0.3s; display: flex; flex-direction: column; justify-content: flex-end; }
+    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+    @media (max-width: 768px) { .portfolio-grid { grid-template-columns: 1fr; } }
+
+    /* Project categories section */
+    .project-categories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .project-category { background: #ffffff; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-sm); border: 1px solid rgba(148, 163, 184, 0.3); }
+    .project-category h3 { margin-top: 0; margin-bottom: 12px; font-size: 1.05rem; }
+    .project-category p { margin-bottom: 8px; font-size: 0.95rem; }
+    .project-category ul { margin: 8px 0 0; padding-left: 18px; font-size: 0.95rem; }
+    .project-category li { margin-bottom: 4px; }
+
+    @media (max-width: 768px) {
+      .project-categories { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="w3Tech Logo.jpg" alt="W3 App Developers Logo" class="brand-logo" />
+        <span class="brand-text">W3 App Developers</span>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="ai-ad-maker.html" class="nav-link">AI Ad</a></li>
+          <li><a href="internship.html" class="nav-link">Internship</a></li>
+          <li><a href="#project-categories" class="nav-link active">Projects</a></li>
+          <li><a href="alumini.html" class="nav-link">Alumni</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="career.html" class="nav-link">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Our Projects & Portfolio</h1>
+          <p class="hero-subtitle">
+            Web applications, mobile apps, custom software solutions and AI/ML projects delivered for clients across Tamil Nadu.
+          </p>
+          <div class="hero-ctas">
+            <a href="#start-project" class="btn btn-primary">Start Your Project</a>
+            <a href="https://wa.me/919698548633?text=Hi%2C%20I%20saw%20your%20portfolio.%20Can%20we%20discuss%20my%20project%3F"
+               class="btn btn-outline btn-whatsapp" target="_blank">
+              WhatsApp Enquiry
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <h3>100+ Projects Delivered</h3>
+            <p>From startups to established businesses, we build scalable digital solutions that drive growth.</p>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value">Web</span>
+              <span class="stat-label">45+</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">Mobile</span>
+              <span class="stat-label">30+</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">Software</span>
+              <span class="stat-label">25+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO FILTERS & GRID -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Projects</h2>
+          <p>Filter by category to see relevant work or scroll through our complete portfolio.</p>
+        </div>
+
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+          <button class="filter-btn" data-filter="software">Software</button>
+          <button class="filter-btn" data-filter="ai">AI/ML</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+          <!-- WEB PROJECTS -->
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-img">eCommerce Platform</div>
+            <div class="portfolio-overlay">
+              <h3>eCommerce Platform</h3>
+              <p>Complete online shopping solution with payment gateway, admin dashboard and inventory management for retail business.</p>
+              <div class="portfolio-tech">
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>Razorpay</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-img">Corporate Website</div>
+            <div class="portfolio-overlay">
+              <h3>Corporate Website & CMS</h3>
+              <p>Modern responsive website with blog, services showcase and lead generation forms for IT consultancy firm.</p>
+              <div class="portfolio-tech">
+                <span>HTML/CSS/JS</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MOBILE PROJECTS -->
+          <div class="portfolio-item" data-category="mobile">
+            <div class="portfolio-img">Food Delivery App</div>
+            <div class="portfolio-overlay">
+              <h3>Food Delivery Android App</h3>
+              <p>Swiggy/UberEats clone with restaurant integration, real-time order tracking and payment gateway.</p>
+              <div class="portfolio-tech">
+                <span>Android (Kotlin)</span>
+                <span>Node.js Backend</span>
+                <span>Google Maps</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="mobile">
+            <div class="portfolio-img">Taxi Booking App</div>
+            <div class="portfolio-overlay">
+              <h3>Taxi Booking Mobile App</h3>
+              <p>Uber clone app with driver tracking, fare calculation, wallet integration and admin panel.</p>
+              <div class="portfolio-tech">
+                <span>Flutter</span>
+                <span>Firebase</span>
+                <span>Google Maps API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SOFTWARE PROJECTS -->
+          <div class="portfolio-item" data-category="software">
+            <div class="portfolio-img">Hospital Management</div>
+            <div class="portfolio-overlay">
+              <h3>Hospital Management System</h3>
+              <p>Complete HMS with patient records, appointment booking, billing, pharmacy and doctor management modules.</p>
+              <div class="portfolio-tech">
+                <span>Python Django</span>
+                <span>PostgreSQL</span>
+                <span>Bootstrap</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="software">
+            <div class="portfolio-img">POS Billing</div>
+            <div class="portfolio-overlay">
+              <h3>POS & Billing Software</h3>
+              <p>Retail billing system with inventory tracking, GST billing, customer management and sales reporting.</p>
+              <div class="portfolio-tech">
+                <span>PHP Laravel</span>
+                <span>MySQL</span>
+                <span>Barcode Scanner</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI/ML PROJECTS -->
+          <div class="portfolio-item" data-category="ai">
+            <div class="portfolio-img">Sales Prediction</div>
+            <div class="portfolio-overlay">
+              <h3>Sales Prediction Dashboard</h3>
+              <p>Machine learning model to predict future sales trends based on historical data and market factors.</p>
+              <div class="portfolio-tech">
+                <span>Python</span>
+                <span>Scikit-learn</span>
+                <span>Tableau</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="ai">
+            <div class="portfolio-img">Chatbot</div>
+            <div class="portfolio-overlay">
+              <h3>AI Customer Support Chatbot</h3>
+              <p>Intelligent chatbot for eCommerce website handling product queries, order status and support tickets.</p>
+              <div class="portfolio-tech">
+                <span>Dialogflow</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MORE PROJECTS -->
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-img">Real Estate Portal</div>
+            <div class="portfolio-overlay">
+              <h3>Real Estate Property Portal</h3>
+              <p>Property listing platform with advanced search, agent management and booking features.</p>
+              <div class="portfolio-tech">
+                <span>React</span>
+                <span>Express.js</span>
+                <span>Cloudinary</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="mobile">
+            <div class="portfolio-img">Education LMS</div>
+            <div class="portfolio-overlay">
+              <h3>Learning Manage System App</h3>
+              <p>Mobile app for online courses with video streaming, quizzes, certificates and student progress tracking.</p>
+              <div class="portfolio-tech">
+                <span>Flutter</span>
+                <span>Firebase</span>
+                <span>AWS S3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT CATEGORIES (NEW CONTENT) -->
+    <section class="section" id="project-categories">
+      <div class="container">
+        <div class="section-header">
+          <h2>Project Categories</h2>
+          <p>Ready-made and custom solutions we can build for your business.</p>
+        </div>
+
+        <div class="project-categories">
+          <!-- 1 On-Demand -->
+          <div class="project-category">
+            <h3>1️⃣ On-Demand Service Apps</h3>
+            <p>High-demand applications for daily services and fast delivery.</p>
+            <ul>
+              <li>Food Delivery App</li>
+              <li>Grocery Delivery App</li>
+              <li>Fruits & Vegetables eCommerce App</li>
+              <li>Swiggy Clone</li>
+              <li>BigBasket Clone</li>
+              <li>Multi-Vendor Grocery App</li>
+              <li>Petrol Delivery App</li>
+              <li>UrbanClap / Urban Company Clone</li>
+              <li>Rapido Clone</li>
+              <li>Taxi Booking App</li>
+              <li>OLA Clone</li>
+              <li>Uber/Ola Taxi Clone</li>
+            </ul>
+          </div>
+
+          <!-- 2 eCommerce -->
+          <div class="project-category">
+            <h3>2️⃣ eCommerce & Retail Applications</h3>
+            <p>Apps and websites for shops, supermarkets and online stores.</p>
+            <ul>
+              <li>eCommerce App</li>
+              <li>Multi Shop App</li>
+              <li>Hardware Accessories App</li>
+              <li>Mobile Accessories App</li>
+              <li>Ayurvedic Products App</li>
+            </ul>
+          </div>
+
+          <!-- 3 Business software -->
+          <div class="project-category">
+            <h3>3️⃣ Business Management Software</h3>
+            <p>Back-office and operational software used in offices and shops.</p>
+            <ul>
+              <li>POS Software</li>
+              <li>Billing Software (GST / Non-GST)</li>
+              <li>Inventory Management System</li>
+              <li>CRM Software</li>
+              <li>HRM Software</li>
+              <li>HR & Sales Management Software</li>
+              <li>AMC Software</li>
+            </ul>
+          </div>
+
+          <!-- 4 Healthcare -->
+          <div class="project-category">
+            <h3>4️⃣ Healthcare Applications</h3>
+            <p>Solutions for hospitals, clinics, pharmacies and labs.</p>
+            <ul>
+              <li>Doctor Appointment App</li>
+              <li>Clinic Appointment Website</li>
+              <li>Pharmacy Website / Software</li>
+              <li>PHMS – Pharmacy Management System</li>
+              <li>Hospital Management System</li>
+              <li>Blood Donation System</li>
+            </ul>
+          </div>
+
+          <!-- 5 Real estate -->
+          <div class="project-category">
+            <h3>5️⃣ Real Estate & Property Apps</h3>
+            <p>Top-selling digital products for property businesses.</p>
+            <ul>
+              <li>Real Estate App & Website</li>
+              <li>Property Portal</li>
+              <li>Real Estate App (E-Property Clone)</li>
+              <li>OYO Rooms Clone (Hotel Rooms Booking)</li>
+            </ul>
+          </div>
+
+          <!-- 6 Education -->
+          <div class="project-category">
+            <h3>6️⃣ Education & Training Apps</h3>
+            <p>Platforms for schools, colleges and coaching institutes.</p>
+            <ul>
+              <li>School Management System</li>
+              <li>Coaching Management App</li>
+              <li>Online Test Series / Quiz App</li>
+              <li>Online Course Platform</li>
+              <li>Online Academy</li>
+            </ul>
+          </div>
+
+          <!-- 7 + 8 Media/social -->
+          <div class="project-category">
+            <h3>8️⃣ Media, Social & Entertainment Apps</h3>
+            <p>Apps for content creators, startups and communities.</p>
+            <ul>
+              <li>Instagram Clone</li>
+              <li>WhatsApp Clone</li>
+              <li>Tinder Dating App / Dating Application</li>
+              <li>Netflix Clone</li>
+              <li>News Application</li>
+              <li>Shayari App</li>
+              <li>OLX Clone</li>
+              <li>Classified Portal</li>
+              <li>Book Directory App</li>
+            </ul>
+          </div>
+
+          <!-- 9 Finance -->
+          <div class="project-category">
+            <h3>9️⃣ Finance & Recharge Systems</h3>
+            <p>Solutions for agents, retailers and digital finance providers.</p>
+            <ul>
+              <li>Multi Recharge Portal</li>
+              <li>AEPS + Multi Recharge Portal</li>
+            </ul>
+          </div>
+
+          <!-- 10 Other -->
+          <div class="project-category">
+            <h3>🔟 Other Useful Business Applications</h3>
+            <p>Additional software products for enterprise and admin use.</p>
+            <ul>
+              <li>Guest Pass System</li>
+              <li>Vehicle Management System</li>
+              <li>Event Management Website</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section section-accent" id="start-project">
+      <div class="container">
+        <div class="internship-inner">
+          <div class="internship-content">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Share your requirements and get a customized proposal with timeline and pricing within 24 hours.</p>
+          </div>
+          <div class="internship-actions">
+            <a href="#project-form" class="btn btn-primary">Start Your Project</a>
+            <a href="https://wa.me/919698548633" class="btn btn-outline btn-whatsapp" target="_blank">
+              WhatsApp Chat
+            </a>
+            <a href="tel:+919698548633" class="btn btn-secondary">Call Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT ENQUIRY FORM -->
+    <section class="section" id="project-form">
+      <div class="container">
+        <div class="section-header">
+          <h2>Project Enquiry Form</h2>
+          <p>Tell us about your project requirements. Our team will review and send you a detailed proposal.</p>
+        </div>
+
+        <form id="projectForm" class="form form-wide">
+          <div class="form-row">
+            <label for="pname">Name*</label>
+            <input type="text" id="pname" name="name" required />
+          </div>
+          <div class="form-row">
+            <label for="pemail">Email*</label>
+            <input type="email" id="pemail" name="email" required />
+          </div>
+          <div class="form-row">
+            <label for="pphone">Phone / WhatsApp*</label>
+            <input type="tel" id="pphone" name="phone" required />
+          </div>
+          <div class="form-row">
+            <label for="ptype">Project Type*</label>
+            <select id="ptype" name="type" required>
+              <option value="">Select</option>
+              <option>Website Development</option>
+              <option>Mobile App Development</option>
+              <option>Custom Software</option>
+              <option>AI/ML Solution</option>
+              <option>eCommerce Solution</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="pdesc">Project Description*</label>
+            <textarea id="pdesc" name="description" rows="5"
+                      placeholder="Describe your requirements, target audience, timeline, budget range etc." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Proposal Request</button>
+          <p class="form-status" id="projectStatus"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="w3Tech Logo.jpg" alt="W3 App Developers" class="footer-logo" />
+        <p>Complete IT solutions, internship training and hosting services across Tamil Nadu.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="internship.html">Internship</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Services</h3>
+        <ul>
+          <li>Website & App Development</li>
+          <li>Custom Software</li>
+          <li>AI / ML / Data Science</li>
+          <li>Digital Marketing & SEO</li>
+          <li>Cloud & Hosting</li>
+          <li>Internship & Training</li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>
+          Phone:
+          <a href="tel:+919698548633">+91 96985 48633</a><br />
+          <a href="tel:+919025010144">+91 90250 10144</a>
+        </p>
+        <p>
+          Instagram:
+          <a href="https://www.instagram.com/training_trains/" target="_blank">@training_trains</a><br />
+          Facebook:
+          <a href="https://www.facebook.com/trainingtrainsgroup/" target="_blank">trainingtrainsgroup</a><br />
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/mentorboopathikumar" target="_blank">Boopathikumar K</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="year"></span> W3 App Developers | TrainingTrains | Domainhostly. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Portfolio filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        portfolioItems.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = 'block';
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Form handler
+    if (typeof handleFormSubmit === "function") {
+      handleFormSubmit("projectForm", "projectStatus", "projectEnquiries");
+    }
+  </script>
+
+  <!-- Floating WhatsApp button -->
+  <div class="wa-floating">
+    <a href="https://wa.me/919698548633" target="_blank" class="wa-pill">
+      WhatsApp us
+    </a>
+    <a href="https://wa.me/919698548633" target="_blank" class="wa-icon">
+      <span>🟢</span>
+    </a>
+  </div>
+
+</body>
+</html>

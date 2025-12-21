@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Careers | Join W3 App Developers & TrainingTrains Team</title>
+  <meta name="description"
+        content="Current job openings at W3 App Developers, TrainingTrains and Domainhostly. Full-time, freelance and part-time positions in development, design, training and marketing." />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Careers-specific styles */
+    .job-openings { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 24px; margin-bottom: 48px; }
+    .job-card { background: white; border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm); border-left: 4px solid var(--color-primary); }
+    .job-title { color: var(--color-secondary); margin-top: 0; font-size: 1.2rem; }
+    .job-meta { display: flex; gap: 16px; margin: 12px 0; font-size: 0.9rem; color: var(--color-muted); }
+    .job-badge { background: rgba(255,107,53,0.1); color: var(--color-primary); padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; }
+    .job-desc { line-height: 1.6; margin-bottom: 16px; }
+    .culture-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .upload-zone { border: 2px dashed #ddd; border-radius: var(--radius-md); padding: 32px; text-align: center; background: #f8f9fa; transition: all 0.2s; cursor: pointer; }
+    .upload-zone:hover, .upload-zone.dragover { border-color: var(--color-primary); background: rgba(255,107,53,0.05); }
+    .upload-icon { font-size: 3rem; color: var(--color-muted); margin-bottom: 12px; }
+    @media (max-width: 768px) { .job-openings { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="w3Tech Logo.jpg" alt="W3 App Developers Logo" class="brand-logo" />
+        <span class="brand-text">W3 App Developers</span>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="ai-ad-maker.html" class="nav-link">AI Ad</a></li>
+          <li><a href="internship.html" class="nav-link">Internship</a></li>
+          <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+          <li><a href="alumni.html" class="nav-link">Alumni</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="careers.html" class="nav-link active">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Careers at W3 App Developers</h1>
+          <p class="hero-subtitle">
+            Join our growing team of developers, designers, trainers and marketing professionals. Full-time, freelance and part-time opportunities available.
+          </p>
+          <div class="hero-ctas">
+            <a href="#apply" class="btn btn-primary">Apply for a Position</a>
+            <a href="https://wa.me/919698548633?text=Hi%2C%20I'm%20interested%20in%20career%20opportunities%20at%20W3%20App%20Developers" class="btn btn-outline btn-whatsapp" target="_blank">
+              WhatsApp HR
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <h3>Growing Team in Erode</h3>
+            <p>Work with modern technologies, real client projects and contribute to student training programs.</p>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value">10+</span>
+              <span class="stat-label">Open Positions</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">Erode</span>
+              <span class="stat-label">Location</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">Flexible</span>
+              <span class="stat-label">Work Options</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRENT JOB OPENINGS -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Current Job Openings</h2>
+          <p>We're hiring talented individuals to join our IT services, training and hosting teams.</p>
+        </div>
+
+        <div class="job-openings">
+          <!-- JOB 1: Full Stack Developer -->
+          <div class="job-card">
+            <h3 class="job-title">Full Stack Developer</h3>
+            <div class="job-meta">
+              <span class="job-badge">Full-time</span>
+              <span class="job-badge">Erode</span>
+              <span class="job-badge">2-4 Years Exp</span>
+            </div>
+            <p class="job-desc">Develop responsive web applications and client projects using MEAN/MERN stacks. Work on eCommerce, business management software and real-time applications.</p>
+            <ul class="list">
+              <li>MEAN/MERN stack development (MongoDB, Express, Angular/React, Node.js)</li>
+              <li>RESTful APIs, database design, deployment</li>
+              <li>Client communication and project delivery</li>
+            </ul>
+            <a href="#apply" class="btn btn-primary btn-sm">Apply Now</a>
+          </div>
+
+          <!-- JOB 2: Android Developer -->
+          <div class="job-card">
+            <h3 class="job-title">Android Developer</h3>
+            <div class="job-meta">
+              <span class="job-badge">Full-time</span>
+              <span class="job-badge">Erode</span>
+              <span class="job-badge">1-3 Years Exp</span>
+            </div>
+            <p class="job-desc">Build native Android applications and Flutter apps for clients in food delivery, taxi booking, eCommerce and education sectors.</p>
+            <ul class="list">
+              <li>Android (Kotlin/Java), Flutter development</li>
+              <li>API integration, Google Maps, payment gateways</li>
+              <li>App Store deployment and maintenance</li>
+            </ul>
+            <a href="#apply" class="btn btn-primary btn-sm">Apply Now</a>
+          </div>
+
+          <!-- JOB 3: Creative Designer (AI Ad Maker) -->
+          <div class="job-card">
+            <h3 class="job-title">Creative Designer (AI Ad Maker)</h3>
+            <div class="job-meta">
+              <span class="job-badge">Freelance/Part-time</span>
+              <span class="job-badge">Remote</span>
+              <span class="job-badge">Fresher OK</span>
+            </div>
+            <p class="job-desc">Design posters, Instagram Reels, YouTube Shorts using Canva. ₹100/image, ₹200-300/video. Work from anywhere.</p>
+            <ul class="list">
+              <li>Poster design, video ads, social media creatives</li>
+              <li>Canva proficiency (basic to advanced)</li>
+              <li>Trending designs, on-time delivery</li>
+            </ul>
+            <a href="ai-ad-maker.html#apply-job" class="btn btn-primary btn-sm">Apply Now</a>
+          </div>
+
+          <!-- JOB 4: Python Developer -->
+          <div class="job-card">
+            <h3 class="job-title">Python Developer</h3>
+            <div class="job-meta">
+              <span class="job-badge">Full-time</span>
+              <span class="job-badge">Erode</span>
+              <span class="job-badge">1-2 Years Exp</span>
+            </div>
+            <p class="job-desc">Develop backend systems, AI/ML models and data science solutions using Python and Django/Flask frameworks.</p>
+            <ul class="list">
+              <li>Python, Django/Flask, REST APIs</li>
+              <li>Machine Learning (Scikit-learn, TensorFlow)</li>
+              <li>Database design (PostgreSQL, MongoDB)</li>
+            </ul>
+            <a href="#apply" class="btn btn-primary btn-sm">Apply Now</a>
+          </div>
+
+          <!-- JOB 5: Digital Marketing Executive -->
+          <div class="job-card">
+            <h3 class="job-title">Digital Marketing Executive</h3>
+            <div class="job-meta">
+              <span class="job-badge">Full-time</span>
+              <span class="job-badge">Erode</span>
+              <span class="job-badge">Fresher OK</span>
+            </div>
+            <p class="job-desc">Manage SEO, social media and content marketing for client websites and our brands. Local SEO focus for Tamil Nadu businesses.</p>
+            <ul class="list">
+              <li>SEO (on-page, off-page), Google Analytics</li>
+              <li>Social media management (Instagram, Facebook)</li>
+              <li>Content writing and basic graphic design</li>
+            </ul>
+            <a href="#apply" class="btn btn-primary btn-sm">Apply Now</a>
+          </div>
+
+          <!-- JOB 6: IT Trainer -->
+          <div class="job-card">
+            <h3 class="job-title">IT Trainer / Mentor</h3>
+            <div class="job-meta">
+              <span class="job-badge">Part-time</span>
+              <span class="job-badge">Erode</span>
+              <span class="job-badge">2+ Years Exp</span>
+            </div>
+            <p class="job-desc">Train students in internship programs across Python, Java, Full Stack, AI/ML and Android development. Hands-on project mentoring.</p>
+            <ul class="list">
+              <li>Conduct training sessions (online/offline)</li>
+              <li>Mentor student projects and assignments</li>
+              <li>Develop training materials and syllabus</li>
+            </ul>
+            <a href="#apply" class="btn btn-primary btn-sm">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPANY CULTURE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Work Culture</h2>
+          <p>Collaborative environment focused on learning, growth and delivering real client impact.</p>
+        </div>
+
+        <div class="culture-grid">
+          <div class="card">
+            <h3>💻 Modern Tech Stack</h3>
+            <p>Work with React, Node.js, Python, Flutter, AI/ML tools and cloud platforms on live client projects.</p>
+          </div>
+          <div class="card">
+            <h3>📚 Continuous Learning</h3>
+            <p>Regular training sessions, tech talks, certifications and exposure to latest industry trends.</p>
+          </div>
+          <div class="card">
+            <h3>⚖️ Work-Life Balance</h3>
+            <p>Flexible hours, work-from-home options, weekends off and team outings every quarter.</p>
+          </div>
+          <div class="card">
+            <h3>💰 Competitive Benefits</h3>
+            <p>Performance bonuses, health insurance, PF/ESIC, laptop allowance and annual increments.</p>
+          </div>
+          <div class="card">
+            <h3>🤝 Client Exposure</h3>
+            <p>Direct client interaction, project ownership and portfolio building opportunities.</p>
+          </div>
+          <div class="card">
+            <h3>👥 Mentorship Program</h3>
+            <p>Pair programming, senior-junior mentoring and career growth guidance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section class="section section-alt" id="apply">
+      <div class="container">
+        <div class="section-header">
+          <h2>Apply for Any Position</h2>
+          <p>Submit your resume and details. Our HR team will review and contact you within 48 hours if shortlisted.</p>
+        </div>
+
+        <form id="careersForm" class="form form-wide" style="max-width: 700px;">
+          <div class="form-row">
+            <label for="rname">Full Name*</label>
+            <input type="text" id="rname" name="name" required />
+          </div>
+          <div class="form-row">
+            <label for="remail">Email*</label>
+            <input type="email" id="remail" name="email" required />
+          </div>
+          <div class="form-row">
+            <label for="rphone">Phone / WhatsApp*</label>
+            <input type="tel" id="rphone" name="phone" required />
+          </div>
+          <div class="form-row">
+            <label for="rposition">Position Applying For*</label>
+            <select id="rposition" name="position" required>
+              <option value="">Select Position</option>
+              <option>Full Stack Developer</option>
+              <option>Android Developer</option>
+              <option>Python Developer</option>
+              <option>Creative Designer (AI Ad Maker)</option>
+              <option>Digital Marketing Executive</option>
+              <option>IT Trainer / Mentor</option>
+              <option>Other / General Application</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="rexp">Years of Experience</label>
+            <select id="rexp" name="experience">
+              <option value="">Fresher</option>
+              <option value="0-1">0-1 Year</option>
+              <option value="1-2">1-2 Years</option>
+              <option value="2-4">2-4 Years</option>
+              <option value="4+">4+ Years</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Resume Upload* (PDF/DOC max 5MB)</label>
+            <div class="upload-zone" id="resumeUpload">
+              <div class="upload-icon">📄</div>
+              <p style="margin: 0 0 8px; color: var(--color-secondary);">Click to select or drag & drop your resume</p>
+              <p id="fileName" style="color: var(--color-muted); font-size: 0.9rem; margin: 0;">No file selected</p>
+              <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required style="display: none;" />
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="rcover">Cover Letter (Optional)</label>
+            <textarea id="rcover" name="cover" rows="4" placeholder="Why you want to join us? Key skills & achievements (200 words max)"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Application</button>
+          <p class="form-status" id="careersStatus"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-accent">
+      <div class="container">
+        <div class="internship-inner">
+          <div class="internship-content">
+            <h2>Don't See Your Role?</h2>
+            <p>Send us your resume anyway. We keep exceptional talent on file for future opportunities.</p>
+          </div>
+          <div class="internship-actions">
+            <a href="#apply" class="btn btn-primary">Submit General Application</a>
+            <a href="https://wa.me/919698548633" class="btn btn-outline btn-whatsapp" target="_blank">
+              WhatsApp HR Team
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="w3Tech Logo.jpg" alt="W3 App Developers" class="footer-logo" />
+        <p>Complete IT solutions, internship training and hosting services across Tamil Nadu.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="internship.html">Internship</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Open Positions</h3>
+        <ul>
+          <li>Full Stack Developer</li>
+          <li>Android Developer</li>
+          <li>Creative Designer</li>
+          <li>Python Developer</li>
+          <li>IT Trainer</li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>HR Contact</h3>
+        <p>
+          Phone:
+          <a href="tel:+919698548633">+91 96985 48633</a>
+        </p>
+        <p>
+          WhatsApp:
+          <a href="https://wa.me/919698548633" target="_blank">Message HR</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="year"></span> W3 App Developers | TrainingTrains | Domainhostly. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Resume upload drag & drop
+    const resumeUpload = document.getElementById('resumeUpload');
+    const resumeInput = document.getElementById('resume');
+    const fileName = document.getElementById('fileName');
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      resumeUpload.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      resumeUpload.addEventListener(eventName, highlight, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      resumeUpload.addEventListener(eventName, unhighlight, false);
+    });
+
+    function highlight(e) {
+      resumeUpload.classList.add('dragover');
+    }
+
+    function unhighlight(e) {
+      resumeUpload.classList.remove('dragover');
+    }
+
+    ['dragover', 'drop'].forEach(eventName => {
+      resumeUpload.addEventListener(eventName, handleDrop, false);
+    });
+
+    resumeUpload.addEventListener('click', () => resumeInput.click());
+
+    function handleDrop(e) {
+      const dt = e.dataTransfer;
+      const files = dt.files;
+      
+      handleFiles(files);
+    }
+
+    resumeInput.addEventListener('change', (e) => {
+      handleFiles(e.target.files);
+    });
+
+    function handleFiles(files) {
+      if (files.length > 0) {
+        const file = files[0];
+        if (file.size > 5 * 1024 * 1024) {
+          alert('File size must be less than 5MB');
+          return;
+        }
+        if (!file.name.match(/\.(pdf|doc|docx)$/i)) {
+          alert('Please upload PDF or Word documents only');
+          return;
+        }
+        fileName.textContent = file.name;
+      }
+    }
+
+    // Form handler
+    handleFormSubmit("careersForm", "careersStatus", "careerApplications");
+  </script>
+  <!-- Floating WhatsApp button -->
+<div class="wa-floating">
+  <a href="https://wa.me/919698548633" target="_blank" class="wa-pill">
+    WhatsApp us
+  </a>
+  <a href="https://wa.me/919698548633" target="_blank" class="wa-icon">
+    <!-- use any WA svg/png here if you like -->
+    <span>🟢</span>
+  </a>
+</div>
+
+</body>
+</html>

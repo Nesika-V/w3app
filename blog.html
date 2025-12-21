@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Blog | IT News, Training Tips & Business Insights - W3 App Developers</title>
+  <meta name="description"
+        content="Latest IT news, internship training tips, software development guides, AI/ML trends and business insights for Tamil Nadu startups and students." />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Blog-specific styles */
+    .blog-categories { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; justify-content: center; }
+    .category-btn { padding: 6px 14px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 20px; cursor: pointer; transition: all 0.2s; font-size: 0.85rem; }
+    .category-btn.active, .category-btn:hover { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 28px; }
+    .blog-card { background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: all 0.3s; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .blog-img { height: 200px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; }
+    .blog-meta { padding: 16px 20px 0; }
+    .blog-category { display: inline-block; background: rgba(255,107,53,0.1); color: var(--color-primary); padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; margin-bottom: 8px; }
+    .blog-date-author { display: flex; gap: 12px; font-size: 0.85rem; color: var(--color-muted); margin-bottom: 8px; }
+    .blog-title { font-size: 1.15rem; margin: 0 0 8px; line-height: 1.3; }
+    .blog-excerpt { color: var(--color-muted); line-height: 1.6; margin-bottom: 16px; }
+    .blog-footer { padding: 0 20px 20px; border-top: 1px solid #f0f0f3; }
+    .read-more { font-weight: 600; color: var(--color-primary); text-decoration: none; }
+    .social-share { display: flex; gap: 8px; margin-top: 12px; }
+    .share-btn { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; text-decoration: none; }
+    .share-whatsapp { background: #25d366; color: white; }
+    .share-facebook { background: #1877f2; color: white; }
+    .share-linkedin { background: #0077b5; color: white; }
+    @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="w3Tech Logo.jpg" alt="W3 App Developers Logo" class="brand-logo" />
+        <span class="brand-text">W3 App Developers</span>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="ai-ad-maker.html" class="nav-link">AI Ad</a></li>
+          <li><a href="internship.html" class="nav-link">Internship</a></li>
+          <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+          <li><a href="alumni.html" class="nav-link">Alumni</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Tech Insights & Training Tips</h1>
+          <p class="hero-subtitle">
+            Latest IT trends, internship preparation guides, software development tips and business insights for Tamil Nadu startups and students.
+          </p>
+          <div class="hero-ctas">
+            <a href="#latest" class="btn btn-primary">Read Latest Posts</a>
+            <a href="https://wa.me/919698548633?text=Hi%2C%20saw%20your%20blog.%20Can%20we%20discuss%20guest%20post%20or%20topic%3F" class="btn btn-outline btn-whatsapp" target="_blank">
+              Suggest Topic
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <h3>SEO-Optimized Content</h3>
+            <p>Articles targeting IT services Tamil Nadu, app development Erode, internship training Perundurai and more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES & FILTER -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Blog Categories</h2>
+          <p>Filter articles by technology, training tips or business insights relevant to Tamil Nadu IT industry.</p>
+        </div>
+
+        <div class="blog-categories">
+          <button class="category-btn active" data-category="all">All Posts</button>
+          <button class="category-btn" data-category="technology">Technology</button>
+          <button class="category-btn" data-category="training">Training</button>
+          <button class="category-btn" data-category="business">Business</button>
+          <button class="category-btn" data-category="erode">Erode Local</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG POSTS GRID -->
+    <section class="section" id="latest">
+      <div class="container">
+        <div class="blog-grid" id="blogGrid">
+          
+          <!-- POST 1 -->
+          <article class="blog-card" data-category="technology">
+            <div class="blog-img">MERN Stack 2025</div>
+            <div class="blog-meta">
+              <span class="blog-category">Full Stack Development</span>
+              <div class="blog-date-author">
+                <span>Dec 21, 2025</span>
+                <span>Boopathikumar K</span>
+              </div>
+              <h3 class="blog-title">MERN Stack Roadmap 2025: Complete Guide for Tamil Nadu Developers</h3>
+              <p class="blog-excerpt">Latest trends in MongoDB, Express.js, React and Node.js. Best practices for building scalable web apps in Erode's growing IT ecosystem.</p>
+            </div>
+            <div class="blog-footer">
+              <a href="#" class="read-more">Read More →</a>
+              <div class="social-share">
+                <a href="#" class="share-btn share-whatsapp">💬</a>
+                <a href="#" class="share-btn share-facebook">📘</a>
+                <a href="#" class="share-btn share-linkedin">💼</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- POST 2 -->
+          <article class="blog-card" data-category="training">
+            <div class="blog-img">Internship Tips</div>
+            <div class="blog-meta">
+              <span class="blog-category">Internship Training</span>
+              <div class="blog-date-author">
+                <span>Dec 18, 2025</span>
+                <span>TrainingTrains Team</span>
+              </div>
+              <h3 class="blog-title">How to Prepare for IT Internships in Erode 2026</h3>
+              <p class="blog-excerpt">Proven strategies for cracking TrainingTrains and other Erode IT internships. Resume tips, technical preparation and interview questions.</p>
+            </div>
+            <div class="blog-footer">
+              <a href="#" class="read-more">Read More →</a>
+              <div class="social-share">
+                <a href="#" class="share-btn share-whatsapp">💬</a>
+                <a href="#" class="share-btn share-facebook">📘</a>
+                <a href="#" class="share-btn share-linkedin">💼</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- POST 3 -->
+          <article class="blog-card" data-category="business">
+            <div class="blog-img">App Development Cost</div>
+            <div class="blog-meta">
+              <span class="blog-category">Business Tips</span>
+              <div class="blog-date-author">
+                <span>Dec 15, 2025</span>
+                <span>W3 Team</span>
+              </div>
+              <h3 class="blog-title">Android App Development Cost in Tamil Nadu 2026</h3>
+              <p class="blog-excerpt">Complete breakdown of food delivery, taxi booking and eCommerce app costs in Erode. Compare freelancers vs agencies.</p>
+            </div>
+            <div class="blog-footer">
+              <a href="#" class="read-more">Read More →</a>
+              <div class="social-share">
+                <a href="#" class="share-btn share-whatsapp">💬</a>
+                <a href="#" class="share-btn share-facebook">📘</a>
+                <a href="#" class="share-btn share-linkedin">💼</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- POST 4 -->
+          <article class="blog-card" data-category="technology">
+            <div class="blog-img">AI Tamil Nadu</div>
+            <div class="blog-meta">
+              <span class="blog-category">AI/ML</span>
+              <div class="blog-date-author">
+                <span>Dec 12, 2025</span>
+                <span>Boopathikumar K</span>
+              </div>
+              <h3 class="blog-title">AI/ML Training Opportunities in Erode & Coimbatore</h3>
+              <p class="blog-excerpt">Best AI/ML internship programs, project ideas and career paths for Tamil Nadu engineering students in 2026.</p>
+            </div>
+            <div class="blog-footer">
+              <a href="#" class="read-more">Read More →</a>
+              <div class="social-share">
+                <a href="#" class="share-btn share-whatsapp">💬</a>
+                <a href="#" class="share-btn share-facebook">📘</a>
+                <a href="#" class="share-btn share-linkedin">💼</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- POST 5 -->
+          <article class="blog-card" data-category="erode">
+            <div class="blog-img">IT Services Erode</div>
+            <div class="blog-meta">
+              <span class="blog-category">Erode Local</span>
+              <div class="blog-date-author">
+                <span>Dec 10, 2025</span>
+                <span>W3 Team</span>
+              </div>
+              <h3 class="blog-title">Top 5 IT Services Companies in Erode for 2026</h3>
+              <p class="blog-excerpt">Comparing web development, app development and software companies serving Erode, Perundurai and Bhavani businesses.</p>
+            </div>
+            <div class="blog-footer">
+              <a href="#" class="read-more">Read More →</a>
+              <div class="social-share">
+                <a href="#" class="share-btn share-whatsapp">💬</a>
+                <a href="#" class="share-btn share-facebook">📘</a>
+                <a href="#" class="share-btn share-linkedin">💼</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- POST 6 -->
+          <article class="blog-card" data-category="training">
+            <div class="blog-img">Flutter Android</div>
+            <div class="blog-meta">
+              <span class="blog-category">Mobile Development</span>
+              <div class="blog-date-author">
+                <span>Dec 8, 2025</span>
+                <span>TrainingTrains</span>
+              </div>
+              <h3 class="blog-title">Flutter vs Native Android: Best Choice for Tamil Nadu Startups</h3>
+              <p class="blog-excerpt">Cost, performance and development speed comparison for Erode businesses building food delivery and taxi apps.</p>
+            </div>
+            <div class="blog-footer">
+              <a href="#" class="read-more">Read More →</a>
+              <div class="social-share">
+                <a href="#" class="share-btn share-whatsapp">💬</a>
+                <a href="#" class="share-btn share-facebook">📘</a>
+                <a href="#" class="share-btn share-linkedin">💼</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- POST 7 -->
+          <article class="blog-card" data-category="business">
+            <div class="blog-img">Domain Hosting</div>
+            <div class="blog-meta">
+              <span class="blog-category">Web Hosting</span>
+              <div class="blog-date-author">
+                <span>Dec 5, 2025</span>
+                <span>Domainhostly</span>
+              </div>
+              <h3 class="blog-title">Domain & Hosting Guide for Tamil Nadu Small Businesses</h3>
+              <p class="blog-excerpt">Choosing right domain (.com vs .in), hosting plans and SSL setup for Erode shops and service providers.</p>
+            </div>
+            <div class="blog-footer">
+              <a href="#" class="read-more">Read More →</a>
+              <div class="social-share">
+                <a href="#" class="share-btn share-whatsapp">💬</a>
+                <a href="#" class="share-btn share-facebook">📘</a>
+                <a href="#" class="share-btn share-linkedin">💼</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- POST 8 -->
+          <article class="blog-card" data-category="technology">
+            <div class="blog-img">Cyber Security</div>
+            <div class="blog-meta">
+              <span class="blog-category">Cybersecurity</span>
+              <div class="blog-date-author">
+                <span>Dec 2, 2025</span>
+                <span>W3 Team</span>
+              </div>
+              <h3 class="blog-title">Cybersecurity Training for Erode Engineering Students</h3>
+              <p class="blog-excerpt">Ethical hacking, network security and basic cybersecurity certification courses available in Perundurai & Erode.</p>
+            </div>
+            <div class="blog-footer">
+              <a href="#" class="read-more">Read More →</a>
+              <div class="social-share">
+                <a href="#" class="share-btn share-whatsapp">💬</a>
+                <a href="#" class="share-btn share-facebook">📘</a>
+                <a href="#" class="share-btn share-linkedin">💼</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-accent">
+      <div class="container">
+        <div class="internship-inner">
+          <div class="internship-content">
+            <h2>Want to Write for Us?</h2>
+            <p>Share your IT expertise, training experiences or business insights. Guest posts welcome from Tamil Nadu tech community.</p>
+          </div>
+          <div class="internship-actions">
+            <a href="https://wa.me/919698548633?text=Hi%2C%20interested%20in%20guest%20posting%20on%20your%20blog" class="btn btn-primary">Pitch Article</a>
+            <a href="contact.html#contact-form" class="btn btn-secondary">Contact Editor</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="w3Tech Logo.jpg" alt="W3 App Developers" class="footer-logo" />
+        <p>Complete IT solutions, internship training and hosting services across Tamil Nadu.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="internship.html">Internship</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Blog Categories</h3>
+        <ul>
+          <li>Technology Updates</li>
+          <li>Training Tips</li>
+          <li>Business Insights</li>
+          <li>Erode IT News</li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>
+          Phone:
+          <a href="tel:+919698548633">+91 96985 48633</a>
+        </p>
+        <p>
+          WhatsApp:
+          <a href="https://wa.me/919698548633" target="_blank">Blog Enquiries</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="year"></span> W3 App Developers | TrainingTrains | Domainhostly. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Floating WhatsApp button -->
+<div class="wa-floating">
+  <a href="https://wa.me/919698548633" target="_blank" class="wa-pill">
+    WhatsApp us
+  </a>
+  <a href="https://wa.me/919698548633" target="_blank" class="wa-icon">
+    <!-- use any WA svg/png here if you like -->
+    <span>🟢</span>
+  </a>
+</div>
+
+
+  <script src="js/main.js"></script>
+  <script>
+    // Blog category filter
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const blogPosts = document.querySelectorAll('.blog-card');
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const category = btn.dataset.category;
+
+        blogPosts.forEach(post => {
+          if (category === 'all' || post.dataset.category === category) {
+            post.style.display = 'block';
+            post.style.opacity = '1';
+          } else {
+            post.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

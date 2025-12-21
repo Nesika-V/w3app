@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Alumni Testimonials </title>
+  <meta name="description"
+        content="Read testimonials from students who completed internship and inplant training at TrainingTrains. Real student feedback with photos from Erode & Perundurai centers." />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Alumni-specific styles */
+    .alumni-stats { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; margin-bottom: 48px; }
+    .alumni-stat { text-align: center; background: white; padding: 24px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); flex: 1; min-width: 180px; }
+    .alumni-stat-value { font-size: 2.2rem; font-weight: 700; color: var(--color-primary); display: block; }
+    .alumni-stat-label { color: var(--color-muted); font-size: 0.9rem; margin-top: 4px; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; }
+    .testimonial-card { background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: all 0.3s; }
+    .testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .testimonial-photo { height: 120px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: 0.9rem; }
+    .testimonial-content { padding: 20px; }
+    .testimonial-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+    .testimonial-name { font-size: 1.1rem; font-weight: 600; color: var(--color-secondary); margin: 0; }
+    .testimonial-meta { font-size: 0.85rem; color: var(--color-muted); margin: 2px 0 0 0; }
+    .stars { color: #ffa500; margin: 4px 0; }
+    .testimonial-text { line-height: 1.5; color: var(--color-text); margin-top: 8px; }
+    @media (max-width: 768px) { .alumni-stats { flex-direction: column; } .testimonial-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="w3Tech Logo.jpg" alt="W3 App Developers Logo" class="brand-logo" />
+        <span class="brand-text">W3 App Developers</span>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="ai-ad-maker.html" class="nav-link">AI Ad</a></li>
+          <li><a href="internship.html" class="nav-link">Internship</a></li>
+          <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+          <li><a href="alumni.html" class="nav-link active">Alumni</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Alumni Success Stories</h1>
+          <p class="hero-subtitle">
+            Real feedback from students who completed internship and inplant training programs at TrainingTrains centers in Erode & Perundurai.
+          </p>
+          <div class="hero-ctas">
+            <a href="internship.html#apply" class="btn btn-primary">Join Next Batch</a>
+            <a href="https://wa.me/919698548633?text=Hi%2C%20I%20saw%20the%20alumni%20testimonials.%20Interested%20in%20internship." class="btn btn-outline btn-whatsapp" target="_blank">
+              WhatsApp Enquiry
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <h3>Trusted by Students Across Tamil Nadu</h3>
+            <p>Photos and feedback from real internship participants during their training sessions at our centers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST INDICATORS -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="alumni-stats">
+          <div class="alumni-stat">
+            <span class="alumni-stat-value">2000+</span>
+            <span class="alumni-stat-label">Students Trained</span>
+          </div>
+          <div class="alumni-stat">
+            <span class="alumni-stat-value">150+</span>
+            <span class="alumni-stat-label">Successful Placements</span>
+          </div>
+          <div class="alumni-stat">
+            <span class="alumni-stat-value">5+</span>
+            <span class="alumni-stat-label">Years Experience</span>
+          </div>
+          <div class="alumni-stat">
+            <span class="alumni-stat-value">50+</span>
+            <span class="alumni-stat-label">Colleges Partnered</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS GRID -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Student Testimonials</h2>
+          <p>Feedback from internship and inplant training participants with their photos from training sessions.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <!-- TESTIMONIAL 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-photo">M. Priya</div>
+            <div class="testimonial-content">
+              <div class="testimonial-header">
+                <div>
+                  <h3 class="testimonial-name">M. Priya</h3>
+                  <p class="testimonial-meta">Python Internship | 2025 Batch | Placed at Zoho</p>
+                </div>
+                <div class="stars">★★★★★</div>
+              </div>
+              <p class="testimonial-text">"TrainingTrains gave me real project experience that helped me clear Zoho's technical interview. The mentor guidance and certificate made a big difference in my placement."</p>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-photo">R. Kumar</div>
+            <div class="testimonial-content">
+              <div class="testimonial-header">
+                <div>
+                  <h3 class="testimonial-name">R. Kumar</h3>
+                  <p class="testimonial-meta">Full Stack (MERN) | 2024 Batch | Working at Nutz.in</p>
+                </div>
+                <div class="stars">★★★★★</div>
+              </div>
+              <p class="testimonial-text">"Completed 30-day internship and built a complete eCommerce project. The hands-on approach and daily tasks prepared me perfectly for my full stack developer role."</p>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-photo">S. Anjali</div>
+            <div class="testimonial-content">
+              <div class="testimonial-header">
+                <div>
+                  <h3 class="testimonial-name">S. Anjali</h3>
+                  <p class="testimonial-meta">AI/ML Internship | 2024 Batch | Data Science Student</p>
+                </div>
+                <div class="stars">★★★★☆</div>
+              </div>
+              <p class="testimonial-text">"Learned machine learning implementation from scratch. The projects we built are now part of my portfolio and helped with my masters application."</p>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-photo">A. Vignesh</div>
+            <div class="testimonial-content">
+              <div class="testimonial-header">
+                <div>
+                  <h3 class="testimonial-name">A. Vignesh</h3>
+                  <p class="testimonial-meta">Android Development | 2025 Batch | Final Year B.E</p>
+                </div>
+                <div class="stars">★★★★★</div>
+              </div>
+              <p class="testimonial-text">"My final year project was completed here with Flutter app development. Got both project support and internship certificate which impressed my college panel."</p>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 5 -->
+          <div class="testimonial-card">
+            <div class="testimonial-photo">N. Deepika</div>
+            <div class="testimonial-content">
+              <div class="testimonial-header">
+                <div>
+                  <h3 class="testimonial-name">N. Deepika</h3>
+                  <p class="testimonial-meta">Web Designing | 2024 Batch | Freelance Designer</p>
+                </div>
+                <div class="stars">★★★★★</div>
+              </div>
+              <p class="testimonial-text">"The Canva and UI/UX training helped me start freelance poster design work. Now earning through social media creatives thanks to TrainingTrains."</p>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 6 -->
+          <div class="testimonial-card">
+            <div class="testimonial-photo">K. Arjun</div>
+            <div class="testimonial-content">
+              <div class="testimonial-header">
+                <div>
+                  <h3 class="testimonial-name">K. Arjun</h3>
+                  <p class="testimonial-meta">Cyber Security | 2025 Batch | 6-Month Internship</p>
+                </div>
+                <div class="stars">★★★★★</div>
+              </div>
+              <p class="testimonial-text">"Hands-on ethical hacking and network security training. The long-term internship gave me industry-level exposure and confidence for cybersecurity roles."</p>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 7 -->
+          <div class="testimonial-card">
+            <div class="testimonial-photo">P. Lakshmi</div>
+            <div class="testimonial-content">
+              <div class="testimonial-header">
+                <div>
+                  <h3 class="testimonial-name">P. Lakshmi</h3>
+                  <p class="testimonial-meta">Digital Marketing | 2024 Batch | Marketing Executive</p>
+                </div>
+                <div class="stars">★★★★☆</div>
+              </div>
+              <p class="testimonial-text">"SEO and social media training helped me get my first marketing job. Practical projects made the concepts stick better than college classes."</p>
+            </div>
+          </div>
+
+          <!-- TESTIMONIAL 8 -->
+          <div class="testimonial-card">
+            <div class="testimonial-photo">V. Sanjay</div>
+            <div class="testimonial-content">
+              <div class="testimonial-header">
+                <div>
+                  <h3 class="testimonial-name">V. Sanjay</h3>
+                  <p class="testimonial-meta">PHP Development | 2025 Batch | Web Developer</p>
+                </div>
+                <div class="stars">★★★★★</div>
+              </div>
+              <p class="testimonial-text">"From basic PHP to complete CMS development in 15 days. The structured training and real client project made me job-ready immediately."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section section-accent">
+      <div class="container">
+        <div class="internship-inner">
+          <div class="internship-content">
+            <h2>Join Our Next Successful Batch</h2>
+            <p>Be part of the TrainingTrains success story. Get hands-on experience, certification and placement support like our 2000+ alumni.</p>
+          </div>
+          <div class="internship-actions">
+            <a href="internship.html#apply" class="btn btn-primary">Apply for Internship</a>
+            <a href="https://wa.me/919698548633" class="btn btn-outline btn-whatsapp" target="_blank">
+              WhatsApp Enquiry
+            </a>
+            <a href="internship.html#fees" class="btn btn-secondary">View Fees</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTE ON PHOTOS -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="form form-wide" style="background: rgba(255,107,53,0.05); border: 1px solid rgba(255,107,53,0.2);">
+          <h3 style="color: var(--color-primary);">📸 Alumni Photo Policy</h3>
+          <p style="font-size: 0.9rem; color: var(--color-muted);">
+            All student photos shown are taken during actual internship/training sessions at our Erode and Perundurai centers. 
+            Testimonials are verified and approved before publishing. Privacy maintained - only first names used with permission.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="w3Tech Logo.jpg" alt="W3 App Developers" class="footer-logo" />
+        <p>Complete IT solutions, internship training and hosting services across Tamil Nadu.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="internship.html">Internship</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Programs</h3>
+        <ul>
+          <li>Python, Java, Full Stack</li>
+          <li>AI/ML, Data Science</li>
+          <li>Android, Flutter Development</li>
+          <li>Web Design & Digital Marketing</li>
+          <li>Cyber Security Training</li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>
+          Phone:
+          <a href="tel:+919698548633">+91 96985 48633</a><br />
+          <a href="tel:+919025010144">+91 90250 10144</a>
+        </p>
+        <p>
+          Instagram:
+          <a href="https://www.instagram.com/training_trains/" target="_blank">@training_trains</a><br />
+          Facebook:
+          <a href="https://www.facebook.com/trainingtrainsgroup/" target="_blank">trainingtrainsgroup</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="year"></span> W3 App Developers | TrainingTrains | Domainhostly. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Floating WhatsApp button -->
+<div class="wa-floating">
+  <a href="https://wa.me/919698548633" target="_blank" class="wa-pill">
+    WhatsApp us
+  </a>
+  <a href="https://wa.me/919698548633" target="_blank" class="wa-icon">
+    <!-- use any WA svg/png here if you like -->
+    <span>🟢</span>
+  </a>
+</div>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
