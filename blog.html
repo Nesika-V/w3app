@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Blog | IT News, Training Tips & Business Insights - W3 App Developers</title>
+  <meta name="description"
+        content="Latest IT news, internship training tips, software development guides, AI/ML trends and business insights for Tamil Nadu startups and students." />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Blog-specific styles */
+    .blog-categories { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; justify-content: center; }
+    .category-btn { padding: 6px 14px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 20px; cursor: pointer; transition: all 0.2s; font-size: 0.85rem; }
+    .category-btn.active, .category-btn:hover { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 28px; }
+    .blog-card { background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: all 0.3s; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .blog-img { height: 200px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; }
+    .thumbnail-link { position: relative; display: block; width: 100%; height: 100%; }
+    .blog-thumbnail { width: 100%; height: 100%; object-fit: cover; }
+    .play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; }
+    .blog-meta { padding: 16px 20px 0; }
+    .blog-category { display: inline-block; background: rgba(255,107,53,0.1); color: var(--color-primary); padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; margin-bottom: 8px; }
+    .blog-date-author { display: flex; gap: 12px; font-size: 0.85rem; color: var(--color-muted); margin-bottom: 8px; }
+    .blog-title { font-size: 1.15rem; margin: 0 0 8px; line-height: 1.3; }
+    .blog-excerpt { color: var(--color-muted); line-height: 1.6; margin-bottom: 16px; }
+    .blog-footer { padding: 0 20px 20px; border-top: 1px solid #f0f0f3; }
+    .read-more { font-weight: 600; color: var(--color-primary); text-decoration: none; }
+    @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } }
+
+    /* Notes Table Styles */
+    .notes-section { margin-top: 60px; }
+    .notes-table-wrapper { overflow-x: auto; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
+    .notes-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .notes-table th { background: var(--color-primary); color: white; padding: 16px 20px; text-align: left; font-weight: 600; }
+    .notes-table td { padding: 16px 20px; border-bottom: 1px solid #f0f0f3; }
+    .notes-table tr:hover { background: #f8f9fa; }
+    .notes-download { 
+      display: inline-flex; align-items: center; gap: 8px; 
+      padding: 8px 16px; background: rgba(255,107,53,0.1); 
+      color: var(--color-primary); text-decoration: none; 
+      border-radius: 20px; font-weight: 600; transition: all 0.2s;
+    }
+    .notes-download:hover { background: var(--color-primary); color: white; transform: translateY(-1px); }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="w3Tech Logo.jpg" alt="W3 App Developers Logo" class="brand-logo" />
+        <span class="brand-text">W3 App Developers</span>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="ai-ad-maker.html" class="nav-link">AI Ad</a></li>
+          <li><a href="internship.html" class="nav-link">Internship</a></li>
+          <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+          <li><a href="alumni.html" class="nav-link">Alumni</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Tech Insights & Training Tips</h1>
+          <p class="hero-subtitle">
+            Latest IT trends, internship preparation guides, software development tips and business insights for Tamil Nadu startups and students.
+          </p>
+          <div class="hero-ctas">
+            <a href="#latest" class="btn btn-primary">Read Latest Posts</a>
+            <a href="https://wa.me/919698548633?text=Hi%2C%20saw%20your%20blog.%20Can%20we%20discuss%20guest%20post%20or%20topic%3F" class="btn btn-outline btn-whatsapp" target="_blank">
+              Suggest Topic
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <h3>SEO-Optimized Content</h3>
+            <p>Articles targeting IT services Tamil Nadu, app development Erode, internship training Perundurai and more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES & FILTER -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Blog Categories</h2>
+          <p>Filter articles by technology, training tips or business insights relevant to Tamil Nadu IT industry.</p>
+        </div>
+
+        <div class="blog-categories">
+          <button class="category-btn active" data-category="all">All Posts</button>
+          <button class="category-btn" data-category="technology">Notes</button>
+          <button class="category-btn" data-category="training">Training</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG POSTS GRID -->
+    <section class="section" id="latest">
+      <div class="container">
+        <div class="blog-grid" id="blogGrid">
+          
+          <!-- POST 1 - INTERNSHIP TIPS WITH HIGHLIGHTED WATCH VIDEO + THUMBNAIL CLICK -->
+          <article class="blog-card" data-category="training">
+            <div class="blog-img">
+              <a href="https://youtu.be/aNaj1iX_5TE?si=kRK4zzAe4v15VaO7" target="_blank" class="thumbnail-link">
+                <img src="Desktop - 2.png" alt="Training Trains College Workshop" class="blog-thumbnail" />
+                <div class="play-overlay">▶</div>
+              </a>
+            </div>
+            <div class="blog-meta">
+              <span class="blog-category">Youtube</span>
+              <div class="blog-date-author">
+                <span>21 Feb 2024</span>
+                <span>TrainingTrains</span>
+              </div>
+              <h3 class="blog-title">How to Handle WordPress Website In Tamil</h3>
+              <p class="blog-excerpt">Master WordPress website handling in Tamil with practical software development training. Work on real projects and gain internship experience to become job-ready.</p>
+            </div>
+          </article>
+
+          <!-- POST 2 - INTERNSHIP TIPS WITH HIGHLIGHTED WATCH VIDEO + THUMBNAIL CLICK -->
+          <article class="blog-card" data-category="training">
+            <div class="blog-img">
+              <a href="https://youtu.be/f-bOIhYti1w?si=30kIUsxkI1vpJpG9" target="_blank" class="thumbnail-link">
+                <img src="Desktop - 1.png" alt="Training Trains College Workshop" class="blog-thumbnail" />
+                <div class="play-overlay">▶</div>
+              </a>
+            </div>
+            <div class="blog-meta">
+              <span class="blog-category">Youtube</span>
+              <div class="blog-date-author">
+                <span>4 July 2024</span>
+                <span>TrainingTrains</span>
+              </div>
+              <h3 class="blog-title">How to Prepare for IT Internships in Erode</h3>
+              <p class="blog-excerpt">Training Trains promotes IT inplant training and internships since 2018, serving 50K+ students with 65+ courses like Full Stack, AI, SEO, Cloud, and Adobe tools via flexible 1:1 online/offline sessions by experts.</p>
+            </div>
+          </article>
+
+          <!-- POST 3 - INTERNSHIP TIPS WITH HIGHLIGHTED WATCH VIDEO + THUMBNAIL CLICK -->
+          <article class="blog-card" data-category="training">
+            <div class="blog-img">
+              <a href="https://youtu.be/IaH20XrtwDc?si=79TYUuPd0HL6GL0s" target="_blank" class="thumbnail-link">
+                <img src="Desktop - 3 (1).png" alt="Training Trains College Workshop" class="blog-thumbnail" />
+                <div class="play-overlay">▶</div>
+              </a>
+            </div>
+            <div class="blog-meta">
+              <span class="blog-category">Youtube</span>
+              <div class="blog-date-author">
+                <span>11 Months</span>
+                <span>TrainingTrains</span>
+              </div>
+              <h3 class="blog-title">Training Trains Batch Open</h3>
+              <p class="blog-excerpt">Admissions are now open for Training Trains Internship 2025. Get practical training, real project exposure, and industry-ready skills.</p>
+            </div>
+          </article>
+
+          <!-- POST 4 - INTERNSHIP TIPS WITH HIGHLIGHTED WATCH VIDEO + THUMBNAIL CLICK -->
+          <article class="blog-card" data-category="training">
+            <div class="blog-img">
+              <a href="https://youtu.be/lininhn5PM0?si=e5xCMOlv4FECZH2N" target="_blank" class="thumbnail-link">
+                <img src="Desktop - 4.png" alt="Training Trains College Workshop" class="blog-thumbnail" />
+                <div class="play-overlay">▶</div>
+              </a>
+            </div>
+            <div class="blog-meta">
+              <span class="blog-category">Youtube</span>
+              <div class="blog-date-author">
+                <span>11 Months</span>
+                <span>TrainingTrains</span>
+              </div>
+              <h3 class="blog-title">Web Site Development PHP And Mysql in Tamil</h3>
+              <p class="blog-excerpt">Learn website development using PHP and MySQL with Tamil explanations. Hands-on training with real-time projects and practical database handling.</p>
+            </div>
+          </article>
+
+          <!-- POST 5 - INTERNSHIP TIPS WITH HIGHLIGHTED WATCH VIDEO + THUMBNAIL CLICK -->
+          <article class="blog-card" data-category="training">
+            <div class="blog-img">
+              <a href="https://youtu.be/BlBmCxGWEio?si=ioWlGKj7L12RbCXE" target="_blank" class="thumbnail-link">
+                <img src="Desktop - 5.png" alt="Training Trains College Workshop" class="blog-thumbnail" />
+                <div class="play-overlay">▶</div>
+              </a>
+            </div>
+            <div class="blog-meta">
+              <span class="blog-category">Youtube</span>
+              <div class="blog-date-author">
+                <span>11 Months</span>
+                <span>TrainingTrains</span>
+              </div>
+              <h3 class="blog-title">Become a Data Scientist with Python</h3>
+              <p class="blog-excerpt">Master Data Science concepts using Python from basics to advanced. Hands-on learning with real-world data and project experience.</p>
+            </div>
+          </article>
+
+          <!-- POST 6 - INTERNSHIP TIPS WITH HIGHLIGHTED WATCH VIDEO + THUMBNAIL CLICK -->
+          <article class="blog-card" data-category="training">
+            <div class="blog-img">
+              <a href="https://youtu.be/M2EAqNybNGU?si=YgxepADVi8g-7klp" target="_blank" class="thumbnail-link">
+                <img src="Desktop - 6.png" alt="Training Trains College Workshop" class="blog-thumbnail" />
+                <div class="play-overlay">▶</div>
+              </a>
+            </div>
+            <div class="blog-meta">
+              <span class="blog-category">Youtube</span>
+              <div class="blog-date-author">
+                <span>11 Months</span>
+                <span>TrainingTrains</span>
+              </div>
+              <h3 class="blog-title">Web Design From Basic Logic in Tamil</h3>
+              <p class="blog-excerpt">Learn the core logic behind web design with clear Tamil explanations. Understand layouts, user flow, and design thinking through practical examples.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notes Section - FULL TABLE WITH pdf/ PATHS -->
+    <section class="section notes-section">
+      <div class="container">
+        <h2 class="section-title">W3 Notes – Downloads</h2>
+
+        <div class="notes-table-wrapper">
+          <table class="notes-table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Year / Label</th>
+                <th>Type</th>
+                <th>Download</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Angular – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Web Development</td>
+                <td><a href="pdf/Angular.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>JavaScript – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Web Development</td>
+                <td><a href="pdf/JavaScript.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>MongoDB – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Database</td>
+                <td><a href="pdf/MongoDB.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Linux – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Operating System</td>
+                <td><a href="pdf/Linux.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>ASP.NET – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Web Development</td>
+                <td><a href="pdf/ASP.NET.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>API Design – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Architecture</td>
+                <td><a href="pdf/API-Design.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Node.js – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Backend</td>
+                <td><a href="pdf/Nodejs.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Python – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Programming</td>
+                <td><a href="pdf/Python.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Redis – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Database</td>
+                <td><a href="pdf/Redis.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>React Native – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Mobile</td>
+                <td><a href="pdf/React-Native.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Rust Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Systems</td>
+                <td><a href="pdf/Rust-Developer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Terraform – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>DevOps</td>
+                <td><a href="pdf/Terraform.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>SQL – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Database</td>
+                <td><a href="pdf/SQL.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>GraphQL Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>API</td>
+                <td><a href="pdf/GraphQL-Developer-Roadmap.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Spring Boot Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Backend</td>
+                <td><a href="pdf/Spring-Boot-Developer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>AWS Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Cloud</td>
+                <td><a href="pdf/AWS-Developer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>System Design – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Architecture</td>
+                <td><a href="pdf/System-Design.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>TypeScript – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Programming</td>
+                <td><a href="pdf/TypeScript.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Cybersecurity Engineer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Security</td>
+                <td><a href="pdf/Cybersecurity-Engineer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Vue – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Frontend</td>
+                <td><a href="pdf/Vue.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Prompt Engineer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>AI</td>
+                <td><a href="pdf/Prompt-Engineer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>PHP – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Web Development</td>
+                <td><a href="pdf/PHP.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Code Review – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Best Practices</td>
+                <td><a href="pdf/Code-Review.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Cloudflare – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Cloud / DevOps</td>
+                <td><a href="pdf/Cloudflare.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>C++ – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Programming</td>
+                <td><a href="pdf/Cpp.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Computer Science – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Theory</td>
+                <td><a href="pdf/Computer-Science.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Technical Writer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Content</td>
+                <td><a href="pdf/Technical-Writer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>iOS Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Mobile</td>
+                <td><a href="pdf/iOS-Developer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Blockchain Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Blockchain</td>
+                <td><a href="pdf/Blockchain-Developer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>UI & UX Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Design</td>
+                <td><a href="pdf/UI_UX-Developer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>System Architecture – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Architecture</td>
+                <td><a href="pdf/System-Architecture.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Product Manager – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Product</td>
+                <td><a href="pdf/Product-Manager.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>AI and Data Scientist – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>AI / Data</td>
+                <td><a href="pdf/AIanddata-scientist.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Data Analytics – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Data</td>
+                <td><a href="pdf/Data-Analyst-Lab-Exercises.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>AI Engineer Lab – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>AI</td>
+                <td><a href="pdf/AI-Engineer-Lab-Exercise.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>DevOps Engineer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>DevOps</td>
+                <td><a href="pdf/DevOps_Lab_Exercise.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Backend Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Backend</td>
+                <td><a href="pdf/BackEnd_Developer_Lab_Exercise.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Engineering Manager – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Management</td>
+                <td><a href="pdf/Engineering-Manager.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>MLOps Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>ML / DevOps</td>
+                <td><a href="pdf/MLOps-Developer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Android Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Mobile</td>
+                <td><a href="pdf/Android-Developer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Developer Relations – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Community</td>
+                <td><a href="pdf/Developer-Relations.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>PostgreSQL – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Database</td>
+                <td><a href="pdf/PostgreSQL.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Quality Assurance – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Testing</td>
+                <td><a href="pdf/Quality-Assurance.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Full Stack Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Full Stack</td>
+                <td><a href="pdf/Full-Stack-Developer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Game Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Game Dev</td>
+                <td><a href="pdf/Game-Developer.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Front End Developer – Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Frontend</td>
+                <td><a href="pdf/FrontEnd_Developer_Lab_Exercises.pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+              <tr>
+                <td>Canva Pro (Digital Marketing Tasks)- Training Trains</td>
+                <td>2025 · W3 Notes</td>
+                <td>Digital Marketing</td>
+                <td><a href="pdf/Canva_Pro_Tasks_Digital_Marketing (2).pdf" target="_blank" class="notes-download">⬇</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-accent">
+      <div class="container">
+        <div class="internship-inner">
+          <div class="internship-content">
+            <h2>Want to Write for Us?</h2>
+            <p>Share your IT expertise, training experiences or business insights. Guest posts welcome from Tamil Nadu tech community.</p>
+          </div>
+          <div class="internship-actions">
+            <a href="https://wa.me/919698548633?text=Hi%2C%20interested%20in%20guest%20posting%20on%20your%20blog" class="btn btn-primary">Pitch Article</a>
+            <a href="contact.html#contact-form" class="btn btn-secondary">Contact Editor</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="w3Tech Logo.jpg" alt="W3 App Developers" class="footer-logo" />
+        <p>Complete IT solutions, internship training and hosting services across Tamil Nadu.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="internship.html">Internship</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Blog Categories</h3>
+        <ul>
+          <li>Technology Updates</li>
+          <li>Training Tips</li>
+          <li>Business Insights</li>
+          <li>Erode IT News</li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>
+          Phone:
+          <a href="tel:+919698548633">+91 96985 48633</a>
+        </p>
+        <p>
+          WhatsApp:
+          <a href="https://wa.me/919698548633" target="_blank">Blog Enquiries</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="year"></span> W3 App Developers | TrainingTrains | Domainhostly. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <div class="wa-floating">
+    <a href="https://wa.me/919698548633" target="_blank" class="wa-pill">
+      WhatsApp us
+    </a>
+    <a href="https://wa.me/919698548633" target="_blank" class="wa-icon">
+      <span>🟢</span>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Blog category filter
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const blogPosts = document.querySelectorAll('.blog-card');
+    const notesSection = document.querySelector('.notes-section');
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const category = btn.dataset.category;
+
+        blogPosts.forEach(post => {
+          if (category === 'all' || post.dataset.category === category) {
+            post.style.display = 'block';
+            post.style.opacity = '1';
+          } else {
+            post.style.display = 'none';
+          }
+        });
+
+        // Show/hide notes section based on category
+        if (category === 'all' || category === 'technology') {
+          notesSection.style.display = 'block';
+        } else {
+          notesSection.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

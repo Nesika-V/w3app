@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Us | W3 App Developers, TrainingTrains, Domainhostly</title>
+  <meta name="description"
+        content="Learn about W3 App Developers (IT Services), TrainingTrains (Internship Training) and Domainhostly (Web Hosting). Complete IT solutions provider in Erode, Tamil Nadu." />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* About-specific styles */
+    .about-stats { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; margin: 48px 0; }
+    .about-stat { text-align: center; flex: 1; min-width: 200px; }
+    .timeline { display: flex; flex-direction: column; gap: 32px; position: relative; max-width: 800px; margin: 0 auto; }
+    .timeline-item { display: flex; align-items: flex-start; gap: 20px; }
+    .timeline-dot { width: 12px; height: 12px; background: var(--color-primary); border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+    .timeline-year { font-weight: 700; color: var(--color-primary); font-size: 1.1rem; min-width: 80px; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+    .team-card { text-align: center; }
+    .team-photo { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; }
+    .brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+    @media (max-width: 768px) { .timeline { gap: 24px; } .timeline-item { flex-direction: column; text-align: center; } .timeline-year { order: -1; } }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="w3Tech Logo.jpg" alt="W3 App Developers Logo" class="brand-logo" />
+        <span class="brand-text">W3 App Developers</span>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="ai-ad-maker.html" class="nav-link">AI Ad</a></li>
+          <li><a href="internship.html" class="nav-link">Internship</a></li>
+          <li><a href="portfolio.html" class="nav-link">Projects</a></li>
+          <li><a href="alumni.html" class="nav-link">Alumni</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">About W3 App Developers Group</h1>
+          <p class="hero-subtitle">
+            Complete IT solutions provider combining software development, internship training and web hosting services across Tamil Nadu.
+          </p>
+          <div class="hero-ctas">
+            <a href="services.html" class="btn btn-primary">View Our Services</a>
+            <a href="internship.html" class="btn btn-secondary">Join Training Programs</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <h3>Three Strong Brands, One Mission</h3>
+            <p>W3 App Developers (IT Services) + TrainingTrains (Internships) + Domainhostly (Hosting)</p>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value">5+</span>
+              <span class="stat-label">Years in Business</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">2000+</span>
+              <span class="stat-label">Students Trained</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">100+</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPANY PROFILE -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Who We Are</h2>
+          <p>Trusted IT partner for businesses and students across Tamil Nadu, delivering real results through technology and training.</p>
+        </div>
+
+        <div class="brands-grid">
+          <!-- W3 App Developers -->
+          <div class="card">
+            <h3>🏢 W3 App Developers</h3>
+            <p>IT services and consultancy company specializing in website development, Android apps, custom software, AI/ML solutions, cybersecurity, digital marketing and cloud infrastructure.</p>
+            <ul class="list">
+              <li>Custom software for business automation</li>
+              <li>eCommerce and on-demand service apps</li>
+              <li>AI/ML and data science solutions</li>
+              <li>Digital transformation consulting</li>
+            </ul>
+          </div>
+
+          <!-- TrainingTrains -->
+          <div class="card">
+            <h3>🎓 TrainingTrains</h3>
+            <p>Internship and inplant training division providing hands-on IT training programs with real project experience, certification and placement guidance for students.</p>
+            <ul class="list">
+              <li>10-day to 1-year internship programs</li>
+              <li>Python, Java, Full Stack, AI/ML, Android</li>
+              <li>Live projects and mentor guidance</li>
+              <li>2000+ students trained successfully</li>
+            </ul>
+          </div>
+
+          <!-- Domainhostly -->
+          <div class="card">
+            <h3>☁️ Domainhostly</h3>
+            <p>Reliable domain registration, web hosting and cloud infrastructure services for businesses, startups and educational institutions.</p>
+            <ul class="list">
+              <li>Domain registration & DNS management</li>
+              <li>Shared, VPS and cloud hosting</li>
+              <li>SSL certificates and email hosting</li>
+              <li>99.9% uptime guarantee</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION VISION VALUES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Mission & Values</h2>
+          <p>Guiding principles that drive everything we do for businesses and students.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>🎯 Mission</h3>
+            <p>Empower businesses with scalable technology solutions and students with practical IT skills to build successful careers in Tamil Nadu's growing digital economy.</p>
+          </div>
+          <div class="card">
+            <h3>🚀 Vision</h3>
+            <p>Become the leading IT services, training and hosting provider in South India, creating 10,000+ skilled professionals and 1000+ successful digital businesses by 2030.</p>
+          </div>
+          <div class="card">
+            <h3>✅ Core Values</h3>
+            <ul class="list">
+              <li>Quality deliverables with attention to detail</li>
+              <li>Student-first training approach</li>
+              <li>Transparent communication</li>
+              <li>Long-term partnership focus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Meet Our Team</h2>
+          <p>Experienced developers, mentors and IT professionals dedicated to your success.</p>
+        </div>
+
+        <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="image 1.png" alt="Boopathikumar K" />
+        </div>
+        <h3>Boopathikumar K</h3>
+        <p>CEO &amp; Lead Mentor</p>
+        <p class="team-bio">
+          15+ years in IT, AI/ML expert, training 2000+ students.
+        </p>
+      </div>
+      </div>
+    </section>
+
+    <!-- MILESTONES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Journey</h2>
+          <p>Milestones that shaped W3 App Developers into Tamil Nadu's trusted IT partner.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-year">2020</div>
+              <h3>W3 App Developers Founded</h3>
+              <p>Started as web development company in Erode, delivering first 10 projects to local businesses.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-year">2021</div>
+              <h3>TrainingTrains Launched</h3>
+              <p>Began internship programs, trained first batch of 50 engineering students with live projects.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-year">2022</div>
+              <h3>Domainhostly Introduced</h3>
+              <p>Expanded into domain registration and hosting services, achieved 99.9% uptime record.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-year">2023</div>
+              <h3>AI/ML Division</h3>
+              <p>Launched AI/ML services and trained 500+ students in data science and machine learning.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-year">2025</div>
+              <h3>2000+ Students Milestone</h3>
+              <p>Second Perundurai center opened, 100+ commercial projects delivered, 150+ placements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-accent">
+      <div class="container">
+        <div class="internship-inner">
+          <div class="internship-content">
+            <h2>Ready to Work Together?</h2>
+            <p>Whether you need IT solutions for your business or training for your career growth, our team is ready to help.</p>
+          </div>
+          <div class="internship-actions">
+            <a href="services.html#quote" class="btn btn-primary">Get Service Quote</a>
+            <a href="internship.html#apply" class="btn btn-secondary">Apply for Training</a>
+            <a href="https://wa.me/919698548633" class="btn btn-outline btn-whatsapp" target="_blank">
+              WhatsApp Chat
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="w3Tech Logo copy.jpg" alt="W3 App Developers" class="footer-logo" />
+        <p>Complete IT solutions, internship training and hosting services across Tamil Nadu.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="internship.html">Internship</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Brands</h3>
+        <ul>
+          <li>W3 App Developers</li>
+          <li>TrainingTrains</li>
+          <li>Domainhostly</li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>
+          Phone:
+          <a href="tel:+919698548633">+91 96985 48633</a><br />
+          <a href="tel:+919025010144">+91 90250 10144</a>
+        </p>
+        <p>
+          Locations: Erode & Perundurai
+        </p>
+      </div>
+    </div>
+    <!-- Floating WhatsApp button -->
+<div class="wa-floating">
+  <a href="https://wa.me/919698548633" target="_blank" class="wa-pill">
+    WhatsApp us
+  </a>
+  <a href="https://wa.me/919698548633" target="_blank" class="wa-icon">
+    <!-- use any WA svg/png here if you like -->
+    <span>🟢</span>
+  </a>
+</div>
+
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="year"></span> W3 App Developers | TrainingTrains | Domainhostly. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
